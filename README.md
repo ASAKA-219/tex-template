@@ -25,7 +25,7 @@ dvipdfmx main.dvi
 
 ## テンプレート
 ３種類あり、
-- 課題などの簡単な用は[こちら](tempates/report/report.tex)
+- 課題などの簡単な用は[こちら](templates/report/report.tex)
 - 論文などの本用は[こちら](templates/book_report/book_report.tex)
 - スライド用は[こちら](templates/slide/slide.tex)
 です。
