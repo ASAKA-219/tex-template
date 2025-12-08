@@ -1,0 +1,69 @@
+\documentclass[dvipdfmx,autodetect-engine,aspectratio=169,18pt]{beamer}
+\uselanguage{japanese} %日本語使用を可能にする
+\languagepath{japanese}
+
+\usepackage{xcolor} %文字の色を変えるパッケージ
+\usepackage{amssymb,amsmath} %amsmathは数学用
+\usepackage{ascmac}
+\usepackage{url}
+\usepackage{graphicx} %画像、表の表示パッケージ
+\usepackage{wrapfig}
+\usepackage{framed} %スライド用パッケージ
+\usefonttheme{professionalfonts}% 数式の文字を通常の LaTeX と同じにする
+\setbeamertemplate{navigation symbols}{}%ナビゲーションボタンを効かなくする
+
+%\setbeamertemplate{theorems}[numbered]% 定理に番号をつける
+
+\deftranslation[to=japanese]{Definition}{定義} %日本語訳
+\deftranslation[to=japanese]{Theorem}{定理}
+
+\titlegraphic{\includegraphics[width=1cm]{img/image.png}}
+
+%日本語対応させるパッケージ
+\usepackage{zxjatype}
+\usepackage[ipa]{zxjafont}
+
+\usetheme{Warsaw}
+\useoutertheme{infolines}
+
+%スライドの色を変える
+%\usecolortheme[RGB={0,115,135}]{structure}
+\usecolortheme[RGB={200,0,0}]{structure}
+\setbeamercolor{white-cyan2}
+{fg=white,bg=cyan!60!black}
+
+\renewcommand{\figurename}{図}
+
+% 二重丸の記号
+% \ooalignで重ねる。\crcrは重ねるものの区切り。
+\newcommand{\doublecirc}{{\ooalign{$\bigcirc$\crcr\hss$\circ$\hss}}}
+
+\begin{document}
+\title[卒業研究最終発表]{ssss}
+\institute[研究室]{sss}
+\author[AA]{aa}
+\date{}
+
+\begin{frame}%タイトルページ
+    \titlepage
+\end{frame}
+
+\logo{\includegraphics[width=1cm]{}}
+
+\begin{frame}[allowframebreaks]{背景}
+dd
+\end{frame}
+
+\begin{frame}[allowframebreaks]{ONE}
+dd
+\end{frame}
+
+\begin{frame}[allowframebreaks]{TWO}
+dd
+\end{frame}
+
+\begin{frame}{まとめ}
+    dd
+\end{frame}
+
+\end{document}

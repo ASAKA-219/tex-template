@@ -1,0 +1,291 @@
+
+%目次のレイアウト調整
+\setcounter{tocdepth}{4}
+%-----
+%----------
+\renewcommand{\thefootnote}{\textasteriskcentered\arabic{footnote}} %脚注の記号変更
+%==========
+% パッケージ集
+%==========
+%数式フォント
+%\usepackage{lxfonts}
+\usepackage{bm}%太字のベクトルを表示
+\usepackage{mathrsfs}%アルファベット筆記書体など
+
+%欧文フォント
+%\usepackage[LGR,LGRx,T2A,T1,OT1]{fontenc}
+\usepackage[LGR,T2A,T1]{fontenc}
+% \usepackage[utf8x]{inputenc}
+\usepackage{tgheros}
+\usepackage{lmodern}
+%\usepackage{mathpazo}
+%ギリシャ語フォント
+\usepackage[polutonikogreek,greek,english,japanese]{babel}
+% ¥usepackage[boldLipsian,10pt,GlyphNames]{teubner}
+\usepackage{teubner}
+\usepackage{substitutefont}
+\substitutefont{LGR}{\rmdefault}{porson}
+
+\usepackage[unicode,hidelinks,pdfusetitle]{hyperref}
+%---------
+%\languageattribute{greek}{polutoniko}
+%----------
+\usepackage{graphicx} %画像の挿入
+\usepackage{wrapfig} %図の回り込み
+\usepackage{framed,color} %枠付き文書
+\definecolor{shadecolor}{gray}{0.85}
+% \begin{oframed} 文 \end{oframed}
+% \begin{shaded} 文 \end{shaded}
+%----------
+\usepackage{setspace}
+%----------
+\usepackage{colortbl}
+\usepackage{tikz}
+\usepackage{tikz-cd} %可換図式
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.12}
+%---------
+\usepackage{ascmac}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amscd}
+% \usepackage{pb-diagram} %可換図式
+\usepackage{fancybox}
+\usepackage{enumerate}
+\usepackage{ulem} %下線
+%---------
+\usepackage{mathdots} %斜めドット
+\usepackage{bbold} % \mathbb{1} など
+%---------
+\usepackage{lipsum} %ダミーテキスト 
+% 例： \lipsum[1-5]
+%---------
+%丸囲い
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+%---------
+\renewcommand{\textgt}[1]{\textsf{\textbf{#1}}}
+%---------
+\usepackage{multicol} % n段組み 
+%\begin{multicols}{段数} 文章 \end{multicols}
+%----------
+\usepackage{vwcol}
+% \begin{vwcol}[widths={0.6,0.4},rule=0.5pt] 
+% 文章
+% \end{vwcol}
+%----------
+\usepackage{physics} %便利なパッケージ
+% \qty() , \qty|| ,\norm{} など ...... カッコ
+% \vb{} ...... 太字のベクトル
+% 数式数式  \qq{テキスト}  数式数式
+% \dd[指数]{x} ...... dx
+% \dv{x} ............ d/dx
+% \pdv{x} ........... ∂/∂x
+% \dv{f}{x} ......... df/dx
+% \pdv{f}{x} ........ ∂f/∂x
+% \mqty(a&b\\c&d) , \mqty|| 行列・行列式
+% \mqty{\imat{n}} ...... 単位行列
+% \mqty{\dmat[0]{n}} ... 対角行列
+% \mqty{\xmat*{a}{m}{n}} ... {a_mn}行列
+%----------
+\usepackage{keyval,physics2}
+\usephysicsmodule{ab,ab.braket}
+% \ab() , \ab<> , \ab[] カッコ
+%----------
+\usepackage[version=4]{mhchem} %化学反応式
+\usepackage{expl3}
+\usepackage{calc}
+% \ce{6 CO2 + 12 H2O -> C6H12O6 + 6 O2 + 6 H2O}
+%----------
+% Mathematical Logic
+\usepackage{turnstile}
+% \renewcommand{\vdash}{\sststile{}{}}
+% \renewcommand{\vDash}{\sdtstile{}{}}
+% \renewcommand{\Vdash}{\dststile{}{}}
+\usepackage{bussproofs}
+\EnableBpAbbreviations
+\renewcommand{\fCenter}{{}\Rightarrow{}}
+\renewcommand{\RL}[1]{\RightLabel{{\scriptsize (#1)}}}
+%%%%%%%%%% 自然演繹 
+% \begin{prooftree}
+% 0 \AXC { $ ... $ }  
+% 1 \UIC { $ ... $ } 
+% 2 \BIC { $ ... $ } 
+% 3 \TIC { $ ... $ } 
+% \end{prooftree}
+%%%%%%%%%% シークエント計算
+%\begin{prooftree}
+% 0 \AX $ ...\fCenter... $
+% 1 \UI $ ...\fCenter... $
+% 2 \BI $ ...\fCenter... $
+% 3 \TI $ ...\fCenter... $
+%\end{prooftree}
+%----------
+\usepackage{qtree} %タブローパッケージ
+%----------
+\renewcommand{\labelitemi}{~$\bullet$~}
+%\renewcommand{\labelitemii}{~\circ~}
+\renewcommand{\labelitemii}{~$\triangleright$~}
+%----------
+%\usepackage{emoji} %絵文字
+% \setemojifont{EmojiOneMozilla}
+%\setemojifont{Noto Emoji Regular}
+%----------
+\newtheorem{definition}{定義}[section]
+\newtheorem{proposition}[definition]{命題}
+\newtheorem{theorem}[definition]{定理}
+\newtheorem{lemma}[definition]{補題}
+\newtheorem{corollary}[definition]{系}
+\newtheorem{example}[definition]{例}
+\newtheorem{practice}[definition]{演習問題}
+\newtheorem*{longproof}{証明}
+\newtheorem*{answer}{解答}
+\newtheorem*{supplement}{補足}
+\newtheorem*{remark}{注意}
+%----------
+% 定理環境（tcolorbox）
+\usepackage{tcolorbox} %箱
+\tcbuselibrary{breakable,skins,theorems}
+%----------
+\tcolorboxenvironment{definition}{
+	blanker,breakable,
+	left=3mm,right=3mm,
+	top=2mm,bottom=2mm,
+	before skip=15pt,after skip=20pt,
+	borderline vertical={0.5pt}{0pt}{black}
+}
+\newtcolorbox{emptydefinition}{
+	blanker,breakable,
+	left=3mm,right=3mm,
+	top=2mm,bottom=2mm,
+	before skip=15pt,after skip=20pt,
+	borderline vertical={0.5pt}{0pt}{black}
+}
+%----------
+\tcolorboxenvironment{proposition}{
+	blanker,breakable,
+	left=3mm,right=3mm,
+	top=3mm,bottom=3mm,
+	before skip=15pt,after skip=15pt,
+	borderline={0.5pt}{0pt}{black}
+}
+\newtcolorbox{emptyproposition}{
+	blanker,breakable,
+	left=3mm,right=3mm,
+	top=3mm,bottom=3mm,
+	before skip=15pt,after skip=15pt,
+	borderline={0.5pt}{0pt}{black}
+}
+%----------
+\tcolorboxenvironment{theorem}{
+	blanker,breakable,
+	left=3mm,right=3mm,
+	top=3mm,bottom=3mm,
+    sharp corners,boxrule=0.6pt,
+	before skip=15pt,after skip=15pt,
+	borderline={0.5pt}{0pt}{black},
+    borderline={0.5pt}{1.5pt}{black}
+}
+\newtcolorbox{emptytheorem}{
+	blanker,breakable,
+	left=3mm,right=3mm,
+	top=3mm,bottom=3mm,
+    sharp corners,boxrule=0.6pt,
+	before skip=15pt,after skip=15pt,
+	borderline={0.5pt}{0pt}{black},
+    borderline={0.5pt}{1.5pt}{black}
+}
+%----------
+\tcolorboxenvironment{lemma}{
+	blanker,breakable,
+	left=3mm,right=3mm,
+	top=3mm,bottom=3mm,
+	before skip=15pt,after skip=15pt,
+	borderline={0.5pt}{0pt}{black}
+}
+%----------
+\tcolorboxenvironment{corollary}{
+	blanker,breakable,
+	left=3mm,right=3mm,
+	top=3mm,bottom=3mm,
+	before skip=15pt,after skip=15pt,
+	borderline={1.0pt}{0pt}{black,dotted}
+}
+\newtcolorbox{emptycorollary}{
+	blanker,breakable,
+	left=3mm,right=3mm,
+	top=3mm,bottom=3mm,
+	before skip=15pt,after skip=15pt,
+	borderline={1.0pt}{0pt}{black,dotted}
+}
+%----------
+\tcolorboxenvironment{example}{
+	blanker,breakable,
+	left=3mm,right=3mm,
+	top=3mm,bottom=3mm,
+	before skip=15pt,after skip=15pt,
+	borderline={0.5pt}{0pt}{black}
+}
+%----------
+\tcolorboxenvironment{practice}{
+	blanker,breakable,
+	left=3mm,right=3mm,
+	top=3mm,bottom=3mm,
+	before skip=15pt,after skip=15pt,
+	borderline={0.5pt}{0pt}{black}
+}
+%----------
+\tcolorboxenvironment{proof}{
+	blanker,breakable,
+	left=3mm,right=3mm,
+	top=2mm,bottom=2mm,
+	before skip=15pt,after skip=20pt,
+	% borderline west={1.5pt}{0pt}{black,dotted}
+	borderline vertical={1pt}{0pt}{black,dotted}
+	% borderline vertical={0.8pt}{0pt}{black,dotted,arrows={Square[scale=0.5]-Square[scale=0.5]}}
+	}
+%----------
+\tcolorboxenvironment{supplement}{
+	blanker,breakable,
+	left=3mm,right=3mm,
+	top=2mm,bottom=2mm,
+	before skip=15pt,after skip=20pt,
+	% borderline west={1.5pt}{0pt}{black,dotted}
+	% borderline vertical={0.5pt}{0pt}{black,arrows = {Circle[scale=0.7]-Circle[scale=0.7]}}
+	borderline vertical={0.5pt}{0pt}{black}
+	% borderline vertical={0.5pt}{0pt}{black},
+	% borderline north={0.5pt}{0pt}{white,arrows={Circle[black,scale=0.7]-Circle[black,scale=0.7]}}
+	}
+%----------
+\tcolorboxenvironment{remark}{
+	blanker,breakable,
+	left=3mm,right=3mm,
+	top=1mm,bottom=1mm,
+	before skip=15pt,after skip=20pt,
+	% borderline west={1.5pt}{0pt}{black,dotted}
+	% borderline vertical={0.5pt}{0pt}{black,arrows = {Circle[scale=0.7]-Circle[scale=0.7]}}
+	borderline vertical={0.5pt}{0pt}{black}
+	% borderline vertical={0.5pt}{0pt}{black},
+	% borderline north={0.5pt}{0pt}{white,arrows={Circle[black,scale=0.7]-Circle[black,scale=0.7]}}
+	}
+%----------
+% マークシート記号
+\newcommand{\egg}[1]{\raisebox{-3pt}{
+	\begin{tikzpicture}[x=1pt,y=1pt,line width=1pt]
+		\draw (0,0) ellipse (4.5 and 6);
+		\draw (0,0) node {
+			\usefont{T1}{phv}{m}{n}
+			\fontsize{9pt}{0}\selectfont #1 \/};
+	\end{tikzpicture}}}
+% マークシート記号
+\newcommand{\eggg}[1]{\raisebox{-3pt}{
+	\begin{tikzpicture}[x=1pt,y=1pt,line width=1pt]
+		\draw[fill=black!30] (0,0) ellipse (4.5 and 6);
+		\draw (0,0) node {
+			\usefont{T1}{phv}{m}{n}
+			\fontsize{9pt}{0}\selectfont #1 \/};
+	\end{tikzpicture}}}
+%-------------------- 

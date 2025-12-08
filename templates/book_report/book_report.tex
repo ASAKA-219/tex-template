@@ -1,0 +1,34 @@
+\documentclass[upreport,a4paper,12pt,dvipdfmx]{jsreport}
+%----------
+\input preamble.tex
+\usepackage{docmute} %ファイル分割
+%----------
+\usepackage{titlesec} % 章見出しのカスタマイズに使用
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{第 \thechapter 章}{20pt}{\huge}
+
+\begin{document}
+
+%\maketitle %タイトル
+%\tableofcontents %目次を表示するならコメントの%を外す
+
+%----------
+% \setcounter{part}{-1}
+% \setcounter{chapter}{-1}
+\renewcommand{\thepart}{\arabic{part}}
+\renewcommand{\thesection}{\arabic{section}}
+%----------
+
+%\clearpage
+\chapter{はじめに}
+\section{指数関数の微分}
+以下の公式\ref{wd}を証明したい.
+\begin{screen}
+%\theorem{$a^x$の微分公式}
+\begin{equation}
+    \dv{x} a^x=a^x\log a \label{wd}
+\end{equation}
+\end{screen}
+\\
+短パス
+\end{document}
