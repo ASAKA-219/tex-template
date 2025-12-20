@@ -22,7 +22,7 @@ if [ -n "$image_exists" ]; then
     echo "コンテナ'$container'が無かったので別の方法で起動するね！ "
     docker run -it \
       --name $container \
-      -v /Users/hokok/texworks:/home/asakayusuke/tex-template/templates \
+      -v /Users/hokok/tex-templates/templates:/home/asakayusuke/tex-template/templates \
       $image_name /bin/bash
   fi
 else
@@ -33,6 +33,6 @@ else
 
   docker run -it \
     --name $container \
-    -v /Users/hokok/texworks:/home/asakayusuke/tex-template/templates \
+    -v /Users/hokok/tex-template/templates:/home/asakayusuke/tex-template/templates \
     $image_name /bin/bash
 fi
