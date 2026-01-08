@@ -6,7 +6,7 @@ cont_exist=$(docker ps -a --filter name=$container --format "{{.ID}}")
 
 #ビルドキャッシュを削除
 removable=$(docker system df | grep 'Build Cache' | awk '{print $5}' | sed 's/[[:alpha:]]//g')
-if [ -n "$removable > 5" ]; then
+if [ `echo "$removable > 100" | bc` == 1 ]; then
   echo "5Gを超えたのでキャッシュを消します"
   docker builder prune
 fi
