@@ -27,27 +27,27 @@
 \renewcommand{\lstlistingname}{プログラム}
 \begin{document}
 \begin{enumerate}
-    \item {\bf \large 実験目的}\\したする. \\
+    \item {\bf \large 実験目的}\\した角度成する. \\
     
-    \item {\bf \large 原理}\\ミよる. \\
+    \item {\bf \large 原理}\\ミング左手の法則による. \\
 
-    \item {\bf \large 【認}\\
+    \item {\bf \large 【実験１】モータードライバの入出力端子の確認}\\
     \begin{enumerate}
         \item[3.1] 実験方法\\
-        実験の前に以する. \\
+        実験の前に以下のプ Piに転送する. \\
         
-        \begin{itembox}{転ンド}
-        {\bf scp s}
+        \begin{itembox}{転送コマンド}
+        {\bf scp *.py student@raspberrypi.local:\(\sim\)/work/2\_motors}
         \end{itembox}
         
-        回路jjjjjjjj
+        回路図を以下に示す.jjjjjjjjjjjjjjjjjj
         \\
 
         \item[3.2] 結果\\
-        モー示す.
+        モータードライバーの変化のようすを示す.
 
         \item[3.3] 検討\\
-        3.3.1 Iるか\\
+        3.3.1 IN1とIN2のスイッチングはどのように行っているか\\
 
         3.3.2 \\
 
@@ -55,13 +55,13 @@
 
     \end{enumerate}
     
-    \item {\bf \large 【実}\\
+    \item {\bf \large 【実験２】Raspberry Piとモータードライバを用いた制御}\\
     \begin{enumerate}
         \item[4.1]実験方法\\
-        以下行する. \\
+        以下の図のような回路を作る. GPIして実行する. \\
 
         \item[4.2] 結果\\
-        今回す.\\
+        今回の実験で作ったプログラムを示す.\\
 
         \item[4.3] 検討\\
         
@@ -70,14 +70,14 @@
         4.3.2\\
         
     \end{enumerate}
-    \item {\bf \large 【御}\\
+    \item {\bf \large 【実験3】Raspberry Piを用いた制御}\\
     \begin{enumerate}
     \item[5.1]実験方法\\
-    5のときのかめる. 
+    5のときのデューティ比が先程の計算と合っているか確かめる. 
 
     \item[5.2] 結果\\
-    今回の実験で作成す. 
-    \begin{lstlisting}[caption=gphhg.py, label=3]
+    今回の実験で作成したプログラムを以下に示す. 
+    \begin{lstlisting}[caption=gpioSwitching.py, label=3]
     
     \end{lstlisting}
     
@@ -85,10 +85,52 @@
     \item[5.3] 検討\\
         プログラムのフローチャートを以下
         
+    \end{enumerate}
+    {\bf \large 以下からテーマ１０}
+    \item {\bf \large 【実験4】サーボモーターの回転角度と制御信号の関係}\\
+    \begin{enumerate}
+        \item[6.1]実験方法\\
+        以下の図のように回ーティ比を求める. \\
+
+        \item[6.2] 結果\\
+        fff
+
+        \item[6.3] 検討\\
+        フローチャートを以下に示す
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=9cm]{jikken4.jpg}
+            
+        \end{figure}
+    \end{enumerate}
+    \item {\bf \large 【実験5】半固定抵抗によって回転角度を操作する制御}\\
+    \begin{enumerate}
+        \item[7.1]実験方法\\
+        回路図はを確かめる. \\
+
+        \item[7.2] 結果\\
+        angleControl.pyを変更した部分を示す.
+        
+        angleControl.pyによって可変抵
+        
+    \end{enumerate}
+    \item {\bf \large 【実験6】明るさによって回転角度を操作する方法}\\
+    \begin{enumerate}
+        \item[8.1]実験方法\\
+        以下の図のように回とを確認する. 
+
+        \item[8.2] 結果\\
+        
+    \end{enumerate}
+    \item {\bf \large 結論}\\
+    \quad rr
+    
 \end{enumerate}
 
 \begin{thebibliography}{9}
-    \bibitem{suken} hhh, 出版, (2222,22,22)
-    \bibitem{rika} 事典
+    \bibitem{suken} [104 数研 物理 313]改訂版　物理, 数研出版, (2023.7,17)
+    \bibitem{rika} 理科大事典
+    \bibitem{hbri} Hブリッジ回路によるブラシ付DCモーターの駆動:原理, Tech Web, (2018,8.28)
+    \bibitem{logic} ロジックICとは？ , 東芝デバイス\&ストレージ会社, (2023,7.18)
 \end{thebibliography}
 \end{document}
