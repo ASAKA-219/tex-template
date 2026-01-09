@@ -30,4 +30,4 @@ dvipdfmx main.dvi
 - スライド用は[こちら](templates/slide/slide.tex)
 です。
 
-> update on 2025/12/8
+> update on 2026/1/9
