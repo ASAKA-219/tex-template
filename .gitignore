@@ -1,8 +1,8 @@
 .env
 .DS_Store
-**.log
-**.dvi
-**.aux
-**.png
-**.jpg
-**.jpeg
+**/**.log
+**/**.dvi
+**/**.aux
+**/**.png
+**/**.jpg
+**/**.jpeg
