@@ -6,14 +6,10 @@
 まず、 $$\TeX$$ ファイルを`dvi`ファイルにコンパイルする必要があります。
 エラーが出た場合は、Enterを押したら途中で止まると思いますので、修正しましょう。
 
-- レポート用
+- レポート用（文書）
+以下のコマンドをターミナルで実行します。
 ```bash
 uplatex main.tex
-```
-
-- スライド用
-```bash
-xelatex main.tex
 ```
 
 そして、`dvi`ファイルを`pdf`に変換します。
@@ -21,7 +17,15 @@ xelatex main.tex
 dvipdfmx main.dvi
 ```
 
-そうしたらpdfが生成されます。
+するとpdfが生成されます。
+
+
+- スライド用
+以下のコマンドをターミナルで実行します。
+```bash
+xelatex main.tex
+```
+するとPDFが出力されます。
 
 ## テンプレート
 ３種類あり、
@@ -30,4 +34,4 @@ dvipdfmx main.dvi
 - スライド用は[こちら](templates/slide/slide.tex)
 です。
 
-> update on 2026/1/9
+> update on 2026/1/10
